@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/fd16b3cc5a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  
+  <title > Formulario</title>
+</head>
+<body class="grid-container">
+  <header class="header" >
+  </header>
+  <main class="main">
+    <div class="sec_form">
+      <div >
+        <h4 class="title_form" > Contacto</h4>
+      </div>
+      <div >
+        <h4 class="subtitle_form" > Completa Aquí tus datos.</h4>
+      </div>
+      <form class="grid-form" id="formulario" name="formulario">
+        <div class="grid-field">
+          <div>
+            <h4 class="subtitle_formulario" > Informacion Personal:</h4>
+          </div>
+          <span>Nombre: </span>
+        </div>
+        <div class="grid-field" id="grupo_nombre">
+          <input class="formulario_input" type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+          <i class="fa-solid fa-circle-check"></i>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <small>error en este campo</small>
+        </div>
+        <div class="grid-field">
+          <span>Apellido: </span>
+        </div>
+        <div class="grid-field" id="grupo_apellido">
+          <input class="formulario_input" type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido">
+          <i class="fa-solid fa-circle-check"></i>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <small>error en este campo</small>
+        </div>
+        <div class="grid-field">
+          <span>Edad: </span>
+        </div>
+        <div class="grid-field" id="grupo_edad">
+          <input class="formulario_input" type="number" name="edad" id="edad" placeholder="Ingrese su edad" >
+          <i class="fa-solid fa-circle-check"></i>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <small>error en este campo</small>
+        </div>
+        <div class="grid-field" id="grupo_sexo">
+          <span>Sexo  </span>
+          <i class="fa-solid fa-circle-check"></i>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <small>error, opciones no seleccionadas</small>
+        </div>
+        <div class="grid-field" id="grupo_sexo">
+          <div>
+            <input type="radio" name="sexo" id="hombre" value="hombre"> Masculino
+          </div>
+          <div>
+            <input type="radio" name="sexo" id="mujer"  value="mujer"> Femenino
+          </div>
+          <div>
+            <input type="radio" name="sexo" id="otro"  value="otro"> Otro
+          </div>
+          
+        </div>
+        <div class="grid-field">
+          <div>
+            <h4 class="subtitle_formulario" > Informacion Adicional:</h4>
+          </div>
+          <span>Empresa</span>
+        </div>
+        <div class="grid-field" id="grupo_comentario">
+          <input class="formulario_input" type="text" name="empresa" id="empresa" >
+        </div>
+        <div class="btn_form" >
+          <button class="button_form" type="submit">Enviar</button>
+        </div>
+        <div class="btn_form" >
+          <button  class="button_form" type="button" id="restablecerForm" value="Restablecer Valores">Restrablecer valores </button>
+        </div>
+      </form>
+    </div>
+</main>
+  <footer class="footer">
+    <p> 2022 Julio Acuña -TP -  </p>
+  </footer>
+  <script src="js/jquery-3.6.1.js"></script>
+  <script type="text/javascript" src="js/formulario.js"></script>
+  <script src="https://kit.fontawesome.com/fd16b3cc5a.js" crossorigin="anonymous"></script>
+  
+</body>
+</html>

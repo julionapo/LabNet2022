@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+@font-face{
+  font-family: 'title_font';
+  src: url(../font/road_rage/Road_Rage.otf);
+}
+
+/**el body ocupa el 100% del espacio como minimo  **/
+html{
+  height: 100%;
+}
+
+body {
+min-height: 100%;
+}
+
+
+
+/** grid en general**/
+.grid-container >* {
+border-radius: 1px;
+box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.8);
+padding: 10px;
+text-align: center;
+}
+
+/** grid en general, se setea como grid el container y sus hijos**/
+.grid-container{
+  display: grid;
+  gap: 10px;
+}
+.header {
+  grid-area: header;
+  background-color: white;
+}
+
+.main{
+  grid-area: main;
+  background-color: whitesmoke;
+}
+.footer{
+  grid-area: footer;
+  background-color: grey;
+  color: goldenrod;
+}
+
+/**defino estructura del template**/
+/**cantidad de cols y su distribucion, altura y / ancho**/
+.grid-container {
+  grid-template:
+  "header   header" 20px  
+  "main     main"   auto
+  "footer   footer" 70px/
+  150px     auto;
+}
+/**MAIN**/
+
+.grid-main  > *{ 
+  display: grid;
+  gap: 5px;
+  padding: 10px;
+}
+
+/** FORMULARIO **/
+.sec_form{
+  width: 400px;
+  height: auto;
+  margin: auto;
+  background-color: floralwhite;
+  box-shadow: 3px 3px 7px 0px rgba(0,0,0,0.80);
+}
+.sec_form:hover{
+  box-shadow: 1px 1px 7px 5px goldenrod;
+  transition: 1s;
+}
+.title_form{
+  font-style: oblique;
+  float: center;
+  font-size: x-large;
+}
+.subtitle_form{
+  font-style: oblique;
+  float: center;
+  font-size: medium;
+}
+/* primera grilla */
+.grid-form{
+display: grid;
+row-gap: 3px;
+grid-template-columns: repeat(minmax(300px, 1fr));
+padding: 20px;
+
+}
+.grid-field{
+  width: 100%;
+  text-align: left;
+}
+/*Iconos y mensaje de error. Clases de exito o error*/
+.formulario_input{
+  border-radius: 4px;
+  border-color: goldenrod;
+} 
+.grid-field small{
+  position: absolute;
+  margin-left: 20px;
+  visibility: hidden;
+}
+.grid-opciones small{
+  position: absolute;
+  margin-left: 20px;
+  visibility: hidden;
+}
+
+.grid-field i {
+  position: absolute;
+  margin-left: 1px;
+  visibility: hidden;
+  }
+
+/*seteo estilo en caso de exito u error en inputs y icons, tambien mje de error */
+.grid-field.success input{
+ border-color: #2ecc71;
+}
+.grid-field.error input{
+  border-color: #e74c3c;
+}
+.grid-field.success i.fa-circle-check {
+  visibility: visible;
+  color:#2ecc71 ;
+}
+
+.grid-field.error i.fa-circle-exclamation {
+  visibility: visible;
+  color:#e74c3c ;
+}
+
+.grid-field.error small{
+  visibility: visible;
+  color:#e74c3c ;
+}
+
+.grid-opciones.error small{
+  visibility: visible;
+  color:#e74c3c ;
+}
+
+.btn_form{
+  text-align: left;
+
+}
+.main button{
+  color: goldenrod;
+  background-color: grey;
+  border-radius: 4px;
+  padding: 4px;
+  border: none;
+}
+
+
+
+
+
+
+
+
