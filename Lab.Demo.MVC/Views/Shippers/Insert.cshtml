@@ -1,0 +1,19 @@
+﻿@model  Lab.Demo.MVC.Models.ShippersView
+
+@{
+    ViewBag.Title = "Shippers Page";
+}
+
+<h1>Insertacion de elemento</h1>
+@if (Model != null)
+{  
+    @Model.nombre
+}
+
+@using (Html.BeginForm("Insert","Shippers", FormMethod.Post))
+{
+    <label>Id:</label> @Html.TextBoxFor(s => s.id, new { @readonly = "readonly" })
+    <label>Nombre:</label> @Html.TextBoxFor(s => s.nombre)
+    <label>Telefono:</label> @Html.TextBoxFor(s => s.telefono)
+    <input type="submit" class="btn btn-success" value="Guardar" />
+}

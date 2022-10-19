@@ -1,0 +1,32 @@
+﻿@model List<Lab.Demo.MVC.Models.ShippersView>
+
+@{
+    ViewBag.Title = "Shippers Page";
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+<table class="table">
+    <tr>
+        <td scope="col">id</td>
+        <td>nombre</td>
+        <td>telefono</td>
+        <td>borrar</td>
+        <td>modificar</td>
+    </tr>
+
+    @foreach(var ship in Model){
+        <tr>
+            <td scope="row">@ship.id</td>
+            <td>@ship.nombre</td>
+            <td>@ship.telefono</td>
+            <td>@Html.ActionLink("borrar", "Delete", new { id = ship.id })</td>
+            <td>@Html.ActionLink("modificar", "ShowForUpdate", new { id = ship.id })</td>
+        </tr>
+    }
+</table>
+
+
+<div>
+    @Html.ActionLink("insertar nuevo shipper", "Insert", "Shippers");
+</div>
